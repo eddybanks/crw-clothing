@@ -6,6 +6,7 @@ import { createStructuredSelector } from 'reselect';
 
 import { setCurrentUser } from './redux/user/user.actions'
 import { selectCurrentUser } from './redux/user/user.selectors';
+import { selectCollectionsForPreview } from './redux/shop/shop.selectors'
 
 import './App.css';
 import HomePage from './pages/homepage/homepage'
@@ -31,9 +32,9 @@ class App extends Component {
             ...snapShot.data()
           })
         })
-      } else {
-        setCurrentUser(userAuth)
       }
+      setCurrentUser(userAuth)
+      // addCollectionAndDocuments('collections', collectionsArray.map(({ title, items }) => ({ title, items })))
     })
   }
 
