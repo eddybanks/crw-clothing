@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 import { connect } from 'react-redux'
-import { createStructuredSelector } from 'reselect';
+import { createStructuredSelector } from 'reselect'
 
 import { setCurrentUser } from './redux/user/user.actions'
-import { selectCurrentUser } from './redux/user/user.selectors';
-import { selectCollectionsForPreview } from './redux/shop/shop.selectors'
+import { selectCurrentUser } from './redux/user/user.selectors'
 
 import './App.css';
 import HomePage from './pages/homepage/homepage'
