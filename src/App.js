@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 
@@ -15,32 +14,6 @@ import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up
 import CheckoutPage from './pages/checkout/checkout'
 
 class App extends Component {
-  unsubscribeFromAuth = null
-
-  componentDidMount() {
-
-    const { setCurrentUser } = this.props
-
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
-      if(userAuth) {
-        const userRef = await createUserProfileDocument(userAuth)
-
-        userRef.onSnapshot(snapShot => {
-          setCurrentUser({
-            id: snapShot.id,
-            ...snapShot.data()
-          })
-        })
-      }
-      setCurrentUser(userAuth)
-      // addCollectionAndDocuments('collections', collectionsArray.map(({ title, items }) => ({ title, items })))
-    })
-  }
-
-  componentWillUnmount() {
-    this.unsubscribeFromAuth()
-  }
-
   render() {
     return (
       <div>
