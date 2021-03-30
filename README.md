@@ -1,68 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Crwn Clothing
 
-## Available Scripts
+This is an ecommerce apparel shoping app that was created by applying some ascpects of a Udemy course on React by Andrea Neagoie and Yihua Zhang while making custom changes.
 
-In the project directory, you can run:
+## Build/Deploy Instructions
 
-### `yarn start`
+This app is currently deployed to the heroku domain http://crwn-clothing.herokuapp.com. However, to build and run the app, simply clone this repo and cd (change directory) into the folder (normally named crwn-clothing) where this is cloned and run yarn install.
+Once, all the dependencies are installed, you can run yarn start as shown below. This should run the application on your localhost:3000.
+`git clone https://github.com/eddybanks/crwn-clothing.git`
+`cd ./crwn-clothing`
+`yarn install`
+`yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Software Stack
+- React
+- Firebase
+- Redux
+  - Redux-logger
+  - Redux-persist
+  - Redux-saga
+- Styled Components
+- React Router Dom
+- Stripe (React-stripe-checkout)
+- Sass (scss)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Purpose
+A demo application to test ecommerce shopping
 
-### `yarn test`
+# Major Functions
+- Enables users to create and log in to an account using firebase
+- Users can browse through a selection of clothing
+- Users can add items to cart
+- Users can view and update quantity of items in cart including deleting items
+- Users can checkout and pay for cart items using test card details in stripe checkout modal
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
